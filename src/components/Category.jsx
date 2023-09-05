@@ -1,7 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const pathLink = ["/", "/normal", "/hard", "/fourDays", "/female"]
+const pathLink = [
+  "/training-program-app/",
+  "/training-program-app/normal",
+  "/training-program-app/hard",
+  "/training-program-app/fourDays",
+  "/training-program-app/female",
+]
 
 export const Category = ({ categoryId, setCategoryId, categories }) => {
   return (

@@ -49,11 +49,14 @@ const App = () => {
         categories={categories}
       />
       <Routes>
-        <Route path="/" element={<Easy />} />
-        <Route path="/normal" element={<Normal />} />
-        <Route path="/hard" element={<Hard />} />
-        <Route path="/fourDays" element={<FourDaysTrainings />} />
-        <Route path="/female" element={<Female />} />
+        <Route path="/training-program-app/" element={<Easy />} />
+        <Route path="/training-program-app/normal" element={<Normal />} />
+        <Route path="/training-program-app/hard" element={<Hard />} />
+        <Route
+          path="/training-program-app/fourDays"
+          element={<FourDaysTrainings />}
+        />
+        <Route path="/training-program-app/female" element={<Female />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ButtonScrollUp />
