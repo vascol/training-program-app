@@ -14,7 +14,9 @@ export const FourDaysTrainings = () => {
 
   React.useEffect(() => {
     setIsLoading(true)
-    fetch("http://localhost:3000/fourDaysTrainings.json")
+    fetch(
+      "https://vascol.github.io/training-program-app/fourDaysTrainings.json"
+    )
       .then((res) => res.json())
       .then((json) => {
         setFourDaysTrainings(json.fourDaysTrainings)

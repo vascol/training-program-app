@@ -19,7 +19,7 @@ const App = () => {
 
   React.useEffect(() => {
     setIsLoading(true)
-    fetch("http://localhost:3000/data.json")
+    fetch("https://vascol.github.io/training-program-app/data.json")
       .then((res) => res.json())
       .then((json) => {
         setCategories(json.categories)

@@ -14,7 +14,7 @@ export const Normal = () => {
 
   React.useEffect(() => {
     setIsLoading(true)
-    fetch("http://localhost:3000/normalTrainings.json")
+    fetch("https://vascol.github.io/training-program-app/normalTrainings.json")
       .then((res) => res.json())
       .then((json) => {
         setNormalTrainings(json.normalTrainings)

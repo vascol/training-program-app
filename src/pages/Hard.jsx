@@ -14,7 +14,7 @@ export const Hard = () => {
 
   React.useEffect(() => {
     setIsLoading(true)
-    fetch("http://localhost:3000/hardTrainings.json")
+    fetch("https://vascol.github.io/training-program-app/hardTrainings.json")
       .then((res) => res.json())
       .then((json) => {
         setHardTrainings(json.hardTrainings)
