@@ -41,7 +41,7 @@ const App = () => {
           fontWeight: "700",
         }}
       >
-        <em>Обережно, можна накачатися!</em>
+        <em>Прикольний напис</em>
       </span>
       <Category
         categoryId={categoryId}

@@ -63,7 +63,9 @@ export const FourDaysTrainings = () => {
                 className="wrapper_modal-training"
               >
                 <div>
-                  <h3>Тренування №1</h3>
+                  <h3>
+                    <em>Тренування №1</em>
+                  </h3>
                   <ul className="modal-training">
                     {obj.training1.map((el, index) => (
                       <li key={index}>{el}</li>
@@ -71,7 +73,9 @@ export const FourDaysTrainings = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3>Тренування №2</h3>
+                  <h3>
+                    <em>Тренування №2</em>
+                  </h3>
                   <ul className="modal-training">
                     {obj.training2.map((el, index) => (
                       <li key={index}>{el}</li>
@@ -79,7 +83,9 @@ export const FourDaysTrainings = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3>Тренування №3</h3>
+                  <h3>
+                    <em>Тренування №3</em>
+                  </h3>
                   <ul className="modal-training">
                     {obj.training3.map((el, index) => (
                       <li key={index}>{el}</li>
@@ -87,7 +93,9 @@ export const FourDaysTrainings = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3>Тренування №4</h3>
+                  <h3>
+                    <em>Тренування №4</em>
+                  </h3>
                   <ul className="modal-training">
                     {obj.training4.map((el, index) => (
                       <li key={index}>{el}</li>
