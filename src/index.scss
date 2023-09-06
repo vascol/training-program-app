@@ -66,6 +66,23 @@ h2 {
   font-family: "Merriweather", serif;
 }
 
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+  @media (max-width: 662px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.search {
+  @media (max-width: 662px) {
+    margin: 0 auto;
+  }
+}
+
 .tags {
   list-style: none;
   padding: 0;

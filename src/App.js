@@ -11,11 +11,13 @@ import { ButtonScrollUp } from "./components/ButtonScrollUp/ButtonScrollUp"
 import { FourDaysTrainings } from "./pages/FourDaysTrainings"
 import Female from "./pages/Female"
 import { NotFound } from "./pages/NotFound/NotFound"
+import { Search } from "./components/Search/Search"
 
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true)
   const [categoryId, setCategoryId] = React.useState(0)
   const [categories, setCategories] = React.useState([])
+  const [searchValue, setSearchValue] = React.useState("")
 
   React.useEffect(() => {
     setIsLoading(true)
@@ -33,30 +35,52 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 style={{ marginBottom: "0px" }}>Old school GYM</h1>
-      <span
-        style={{
-          fontSize: "18px",
-          color: "red",
-          fontWeight: "700",
-        }}
-      >
-        <em>Прикольний напис</em>
-      </span>
+      <div className="header">
+        <div className="search">
+          <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+        </div>
+        <div>
+          <h1 style={{ marginBottom: "0px" }}>Old school GYM</h1>
+
+          <span
+            style={{
+              fontSize: "18px",
+              color: "red",
+              fontWeight: "700",
+            }}
+          >
+            <em>Обережно, можна накачатися!</em>
+          </span>
+        </div>
+      </div>
       <Category
         categoryId={categoryId}
         setCategoryId={setCategoryId}
         categories={categories}
       />
       <Routes>
-        <Route path="/training-program-app/" element={<Easy />} />
-        <Route path="/training-program-app/normal" element={<Normal />} />
-        <Route path="/training-program-app/hard" element={<Hard />} />
         <Route
-          path="/training-program-app/fourDays"
-          element={<FourDaysTrainings />}
+          path="/"
+          element={<Easy searchValue={searchValue} categoryId={categoryId} />}
         />
-        <Route path="/training-program-app/female" element={<Female />} />
+        <Route
+          path="/normal"
+          element={<Normal searchValue={searchValue} categoryId={categoryId} />}
+        />
+        <Route
+          path="/hard"
+          element={<Hard searchValue={searchValue} categoryId={categoryId} />}
+        />
+        <Route
+          path="/fourDays"
+          element={
+            <FourDaysTrainings
+              searchValue={searchValue}
+              categoryId={categoryId}
+            />
+          }
+        />
+        <Route path="/female" element={<Female />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ButtonScrollUp />

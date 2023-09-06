@@ -1,7 +1,7 @@
 import React from "react"
 import { Modal } from "../components/Modal"
 
-export const Easy = () => {
+export const Easy = ({ searchValue, categoryId }) => {
   const [isLoading, setIsLoading] = React.useState(true)
   const [easyTrainings, setEasyTrainings] = React.useState([])
   const [isOpen, setOpen] = React.useState(false)
@@ -34,68 +34,75 @@ export const Easy = () => {
 
   return (
     <div className="trainings">
-      {easyTrainings.map((obj) => (
-        <div key={obj.id}>
-          <div className="collection" onClick={() => onClickModal(obj.id)}>
-            <h2>{obj.name}</h2>
-            <img className="collection__big" src={obj.img} alt="Item" />
+      {easyTrainings
+        .filter((obj) =>
+          obj.name.toLowerCase().includes(searchValue.toLowerCase()) &&
+          categoryId === 0
+            ? obj
+            : obj.id === categoryId
+        )
+        .map((obj) => (
+          <div key={obj.id}>
+            <div className="collection" onClick={() => onClickModal(obj.id)}>
+              <h2>{obj.name}</h2>
+              <img className="collection__big" src={obj.img} alt="Item" />
 
-            <h4>{obj.description}</h4>
-          </div>
-          {modalId === obj.id && (
-            <Modal isOpen={isOpen} setOpen={setOpen} classNameModal="modal">
-              <h2 className="modal-training--title">
-                <span
-                  style={{
-                    borderBottom: "3px solid red",
-                    fontSize: "18px",
-                    color: "red",
-                    fontWeight: "700",
-                  }}
+              <h4>{obj.description}</h4>
+            </div>
+            {modalId === obj.id && (
+              <Modal isOpen={isOpen} setOpen={setOpen} classNameModal="modal">
+                <h2 className="modal-training--title">
+                  <span
+                    style={{
+                      borderBottom: "3px solid red",
+                      fontSize: "18px",
+                      color: "red",
+                      fontWeight: "700",
+                    }}
+                  >
+                    <em>{obj.name}</em>
+                  </span>
+                </h2>
+                <div
+                  onClick={() => setOpen(false)}
+                  className="wrapper_modal-training"
                 >
-                  <em>{obj.name}</em>
-                </span>
-              </h2>
-              <div
-                onClick={() => setOpen(false)}
-                className="wrapper_modal-training"
-              >
-                <div>
-                  <h3>
-                    <em>Тренування №1</em>
-                  </h3>
-                  <ul className="modal-training">
-                    {obj.training1.map((el, index) => (
-                      <li key={index}>{el}</li>
-                    ))}
-                  </ul>
+                  <div>
+                    <h3>
+                      <em>Тренування №1</em>
+                    </h3>
+                    <ul className="modal-training">
+                      {obj.training1.map((el, index) => (
+                        <li key={index}>{el}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>
+                      <em>Тренування №2</em>
+                    </h3>
+                    <ul className="modal-training">
+                      {obj.training2.map((el, index) => (
+                        <li key={index}>{el}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>
+                      <em>Тренування №3</em>
+                    </h3>
+                    <ul className="modal-training">
+                      {obj.training3.map((el, index) => (
+                        <li key={index}>{el}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3>
-                    <em>Тренування №2</em>
-                  </h3>
-                  <ul className="modal-training">
-                    {obj.training2.map((el, index) => (
-                      <li key={index}>{el}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3>
-                    <em>Тренування №3</em>
-                  </h3>
-                  <ul className="modal-training">
-                    {obj.training3.map((el, index) => (
-                      <li key={index}>{el}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              {/* <p className="modal-description">{obj.bigDescription}</p> */}
-            </Modal>
-          )}
-        </div>
-      ))}
+                {/* <p className="modal-description">{obj.bigDescription}</p> */}
+              </Modal>
+            )}
+          </div>
+        ))}
     </div>
   )
 }
