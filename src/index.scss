@@ -233,8 +233,8 @@ h2 {
 .bigModal {
   background-color: #fff;
   width: 70%;
-  max-width: 500px;
-  padding: 30px;
+  max-width: 560px;
+  padding: 15px 30px 30px;
   padding-bottom: 30px;
   border-radius: 10px;
   position: absolute;
@@ -244,10 +244,10 @@ h2 {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in-out;
   @media (max-width: 660px) {
-    width: 90%;
+    width: 92%;
   }
   @media (max-width: 540px) {
-    padding: 22px 12px;
+    padding: 10px 16px 16px;
     font-size: 14px;
   }
   @media (max-width: 456px) {
@@ -263,9 +263,16 @@ h2 {
     margin-bottom: 0;
   }
 
-  // ul {
-  //   background-color: #eff0f1;
-  // }
+  ul {
+    @media (max-width: 456px) {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  li {
+    margin-bottom: 1px;
+  }
 
   svg {
     position: absolute;
