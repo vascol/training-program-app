@@ -60,19 +60,19 @@ const App = () => {
       />
       <Routes>
         <Route
-          path="/"
+          path="/training-program-app/"
           element={<Easy searchValue={searchValue} categoryId={categoryId} />}
         />
         <Route
-          path="/normal"
+          path="/training-program-app/normal"
           element={<Normal searchValue={searchValue} categoryId={categoryId} />}
         />
         <Route
-          path="/hard"
+          path="/training-program-app/hard"
           element={<Hard searchValue={searchValue} categoryId={categoryId} />}
         />
         <Route
-          path="/fourDays"
+          path="/training-program-app/fourDays"
           element={
             <FourDaysTrainings
               searchValue={searchValue}
@@ -80,7 +80,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/female" element={<Female />} />
+        <Route path="/training-program-app/female" element={<Female />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ButtonScrollUp />
