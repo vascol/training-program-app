@@ -1,7 +1,7 @@
 {
   "normalTrainings": [
     {
-      "id": 1,
+      "id": 101,
       "name": "№1 'Командо'",
       "img": [
         "https://sportishka.com/uploads/posts/2022-11/1667454775_1-sportishka-com-p-shvartsenegger-s-brevnom-krasivo-1.png"
@@ -36,11 +36,9 @@
       "bigDescription": "Програма розрахована для качків зі стажем."
     },
     {
-      "id": 2,
+      "id": 102,
       "name": "#2 'Все по 6'",
-      "img": [
-        "https://images.pexels.com/photos/4164844/pexels-photo-4164844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-      ],
+      "img": ["https://i.ytimg.com/vi/VnYDrs2ykcI/maxresdefault.jpg"],
       "training1": [
         "(Спина, біцепс)",
         "1. Станова тяга (класична, або ліфтерська) ... 4х/6р",
@@ -70,7 +68,7 @@
       "bigDescription": "Програма розрахована для качків зі стажем."
     },
     {
-      "id": 3,
+      "id": 103,
       "name": "#3 'Котигорошко'",
       "img": [
         "https://images.1plus1.video/playlist-1/92559/eda219796e174d56a3a8b4ea0090aa31.490x520.jpg"
@@ -109,7 +107,7 @@
       "bigDescription": "Програма розрахована для качків зі стажем."
     },
     {
-      "id": 4,
+      "id": 104,
       "name": "№4 'Відновлення'",
       "img": ["https://i.ytimg.com/vi/DLNhyq8S5D4/maxresdefault.jpg"],
       "training1": [
@@ -143,7 +141,7 @@
       "bigDescription": "Програма розрахована  для навачків для загального розвитку."
     },
     {
-      "id": 5,
+      "id": 105,
       "name": "№5 'Атлет'",
       "img": [
         "https://images.pexels.com/photos/931321/pexels-photo-931321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -181,7 +179,7 @@
       "bigDescription": "Програма розрахована  для навачків для загального розвитку."
     },
     {
-      "id": 6,
+      "id": 106,
       "name": "№6 'Дивна'",
       "img": [
         "https://images.pexels.com/photos/4164765/pexels-photo-4164765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

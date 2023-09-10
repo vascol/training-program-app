@@ -1,7 +1,7 @@
 {
   "hardTrainings": [
     {
-      "id": 1,
+      "id": 301,
       "name": "№1 'Виживший'",
       "img": [
         "https://images.pexels.com/photos/7289233/pexels-photo-7289233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -37,7 +37,7 @@
       "bigDescription": "Програма розрахова на качків із солідним стажем."
     },
     {
-      "id": 2,
+      "id": 302,
       "name": "№2 'Вікінг'",
       "img": [
         "https://images.pexels.com/photos/3839053/pexels-photo-3839053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -73,7 +73,7 @@
       "bigDescription": "Програма розрахова на качків із солідним стажем."
     },
     {
-      "id": 3,
+      "id": 303,
       "name": "№3 'Самурай'",
       "img": [
         "https://images.pexels.com/photos/703016/pexels-photo-703016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

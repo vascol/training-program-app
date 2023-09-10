@@ -1,7 +1,7 @@
 {
   "fourDaysTrainings": [
     {
-      "id": 1,
+      "id": 401,
       "name": "Силова чотириденка",
       "img": [
         "https://images.pexels.com/photos/4162450/pexels-photo-4162450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -41,7 +41,7 @@
       "bigDescription": "Програма розрахова на качків зі стажем."
     },
     {
-      "id": 2,
+      "id": 402,
       "name": "Дельти",
       "img": [
         "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
