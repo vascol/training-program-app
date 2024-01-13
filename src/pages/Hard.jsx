@@ -1,8 +1,7 @@
 import React from "react"
 import { Modal } from "../components/Modal"
 
-export const Hard = ({ searchValue, categoryId }) => {
-  const [isLoading, setIsLoading] = React.useState(true)
+export const Hard = ({ isLoading, setIsLoading, searchValue, categoryId }) => {
   const [hardTrainings, setHardTrainings] = React.useState([])
   const [isOpen, setOpen] = React.useState(false)
   const [modalId, setModalId] = React.useState()
@@ -98,7 +97,6 @@ export const Hard = ({ searchValue, categoryId }) => {
                     </ul>
                   </div>
                 </div>
-                {/* <p className="modal-description">{obj.bigDescription}</p> */}
               </Modal>
             )}
           </div>

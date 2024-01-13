@@ -9,9 +9,10 @@ import { Normal } from "./pages/Normal"
 import { Hard } from "./pages/Hard"
 import { ButtonScrollUp } from "./components/ButtonScrollUp/ButtonScrollUp"
 import { FourDaysTrainings } from "./pages/FourDaysTrainings"
-import Female from "./pages/Female"
+import { Female } from "./pages/Female"
 import { NotFound } from "./pages/NotFound/NotFound"
 import { Search } from "./components/Search/Search"
+import Footer from "./components/Footer"
 
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true)
@@ -40,8 +41,9 @@ const App = () => {
           <Search searchValue={searchValue} setSearchValue={setSearchValue} />
         </div>
         <div>
-          <h1 style={{ marginBottom: "0px" }}>Old school GYM</h1>
-
+          <h1 style={{ marginBottom: "0px", marginTop: "14px" }}>
+            Old school GYM
+          </h1>
           <span
             style={{
               fontSize: "18px",
@@ -49,7 +51,7 @@ const App = () => {
               fontWeight: "700",
             }}
           >
-            <em>Обережно, можна накачатися!</em>
+            <em>Продам гараж</em>
           </span>
         </div>
       </div>
@@ -61,29 +63,63 @@ const App = () => {
       <Routes>
         <Route
           path="/training-program-app/"
-          element={<Easy searchValue={searchValue} categoryId={categoryId} />}
-        />
-        <Route
-          path="/training-program-app/normal"
-          element={<Normal searchValue={searchValue} categoryId={categoryId} />}
-        />
-        <Route
-          path="/training-program-app/hard"
-          element={<Hard searchValue={searchValue} categoryId={categoryId} />}
-        />
-        <Route
-          path="/training-program-app/fourDays"
           element={
-            <FourDaysTrainings
+            <Easy
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
               searchValue={searchValue}
               categoryId={categoryId}
             />
           }
         />
-        <Route path="/training-program-app/female" element={<Female />} />
+        <Route
+          path="/training-program-app/normal"
+          element={
+            <Normal
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              searchValue={searchValue}
+              categoryId={categoryId}
+            />
+          }
+        />
+        <Route
+          path="/training-program-app/hard"
+          element={
+            <Hard
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              searchValue={searchValue}
+              categoryId={categoryId}
+            />
+          }
+        />
+        <Route
+          path="/training-program-app/fourDays"
+          element={
+            <FourDaysTrainings
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              searchValue={searchValue}
+              categoryId={categoryId}
+            />
+          }
+        />
+        <Route
+          path="/training-program-app/female"
+          element={
+            <Female
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              searchValue={searchValue}
+              categoryId={categoryId}
+            />
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ButtonScrollUp />
+      {!isLoading && <Footer />}
     </div>
   )
 }

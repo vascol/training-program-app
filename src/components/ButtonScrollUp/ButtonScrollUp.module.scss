@@ -4,11 +4,13 @@
   right: -36px;
   align-items: center;
   width: 100%;
+  opacity: 0.9;
   position: relative;
 
   @media (max-width: 720px) {
     right: -20px;
   }
+
   div {
     display: flex;
     justify-content: center;
@@ -29,5 +31,10 @@
 
   &:hover {
     background-color: #304040;
+  }
+
+  @media (max-width: 420px) {
+    width: 46px;
+    height: 46px;
   }
 }

@@ -1,8 +1,12 @@
 import React from "react"
 import { Modal } from "../components/Modal"
 
-export const FourDaysTrainings = ({ searchValue, categoryId }) => {
-  const [isLoading, setIsLoading] = React.useState(true)
+export const FourDaysTrainings = ({
+  isLoading,
+  setIsLoading,
+  searchValue,
+  categoryId,
+}) => {
   const [fourDaysTrainings, setFourDaysTrainings] = React.useState([])
   const [isOpen, setOpen] = React.useState(false)
   const [modalId, setModalId] = React.useState()
@@ -69,48 +73,76 @@ export const FourDaysTrainings = ({ searchValue, categoryId }) => {
                   onClick={() => setOpen(false)}
                   className="wrapper_modal-training"
                 >
-                  <div>
-                    <h3>
-                      <em>Тренування №1</em>
-                    </h3>
-                    <ul className="modal-training">
-                      {obj.training1.map((el, index) => (
-                        <li key={index}>{el}</li>
-                      ))}
-                    </ul>
+                  <div style={{ display: "flex", fontSize: "13px" }}>
+                    <div>
+                      <h3>
+                        <em>Тренування №1</em>
+                      </h3>
+                      <ul className="modal-training">
+                        {obj.training1.map((el, index) => (
+                          <li key={index} className="modal-training__fourDays">
+                            {el}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>
+                        <em>Тренування №2</em>
+                      </h3>
+                      <ul className="modal-training">
+                        {obj.training2.map((el, index) => (
+                          <li key={index} className="modal-training__fourDays">
+                            {el}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div>
-                    <h3>
-                      <em>Тренування №2</em>
-                    </h3>
-                    <ul className="modal-training">
-                      {obj.training2.map((el, index) => (
-                        <li key={index}>{el}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3>
-                      <em>Тренування №3</em>
-                    </h3>
-                    <ul className="modal-training">
-                      {obj.training3.map((el, index) => (
-                        <li key={index}>{el}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3>
-                      <em>Тренування №4</em>
-                    </h3>
-                    <ul className="modal-training">
-                      {obj.training4.map((el, index) => (
-                        <li key={index}>{el}</li>
-                      ))}
-                    </ul>
+                  <div style={{ display: "flex", fontSize: "13px" }}>
+                    <div>
+                      <h3>
+                        <em>Тренування №3</em>
+                      </h3>
+                      <ul className="modal-training">
+                        {obj.training3.map((el, index) => (
+                          <li key={index} className="modal-training__fourDays">
+                            {el}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>
+                        <em>Тренування №4</em>
+                      </h3>
+                      <ul className="modal-training">
+                        {obj.training4.map((el, index) => (
+                          <li key={index} className="modal-training__fourDays">
+                            {el}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {obj.training5 && (
+                      <div>
+                        <h3>
+                          <em>Тренування №5</em>
+                        </h3>
+                        <ul className="modal-training">
+                          {obj.training5.map((el, index) => (
+                            <li
+                              key={index}
+                              className="modal-training__fourDays"
+                            >
+                              {el}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
-                {/* <p className="modal-description">{obj.bigDescription}</p> */}
               </Modal>
             )}
           </div>
